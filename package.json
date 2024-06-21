@@ -8,9 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node src/index.js",
-    "start:dev": "nodemon --exec node src/index.js --unhandled-rejections=warn",
-    "test": "jest --detectOpenHandles --coverage"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
