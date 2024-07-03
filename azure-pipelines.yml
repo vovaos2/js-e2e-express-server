@@ -27,5 +27,5 @@ steps:
     script: |
       echo 'The value of pluginOrganization:' $(pluginOrganization)
       echo 'The value of pluginProject:' $(pluginProject)
-      echo 'The value of myValuepluginName:' $(myValuepluginName)
+      echo 'The value of pluginName:' $(pluginName)
       echo 'The value of pluginPath:' $(pluginPath)
