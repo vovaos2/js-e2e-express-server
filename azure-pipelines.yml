@@ -6,9 +6,6 @@
 trigger:
 - main
 
-variables:
-- group: Shared Variables
-
 parameters:
   - name: pluginOrganization
     displayName: Description of pluginOrganization
@@ -28,6 +25,11 @@ parameters:
   - name: pluginPath
     displayName: Description of pluginPath
     default: someTextpluginPath
+    type: string
+
+  - name: pluginType
+    displayName: Description of pluginType
+    default: someTextpluginType
     type: string
 
 pool:
@@ -50,3 +52,4 @@ steps:
       echo 'The value of pluginProject:'  ${{ parameters.pluginProject }}
       echo 'The value of pluginName:'  ${{ parameters.pluginName }}
       echo 'The value of pluginPath:'  ${{ parameters.pluginPath }}
+      echo 'The value of pluginPath:'  ${{ parameters.pluginType }}
