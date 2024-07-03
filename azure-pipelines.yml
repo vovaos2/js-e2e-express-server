@@ -7,14 +7,7 @@ trigger:
 - main
 
 variables:
-- name: pluginOrganization
-  value: myValuepluginOrganization
-- name: pluginProject
-  value: myValuepluginProject
-- name: pluginName
-  value: myValuepluginName
-- name: pluginPath
-  value: myValuepluginPath
+- group: Shared Variables
 
 pool:
   vmImage: ubuntu-latest
@@ -28,11 +21,11 @@ steps:
 - script: |
     npm install
   displayName: 'npm install'
-- script: echo pluginOrganization = $(pluginOrganization)
-  displayName: 'echo pluginOrganization'
-- script: echo pluginProject = $(pluginProject)
-  displayName: 'echo pluginProject'
-- script: echo pluginName = $(pluginName)
-  displayName: 'echo pluginName'
-- script: echo pluginPath = $(pluginPath)
-  displayName: 'echo pluginPath'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo 'The value of pluginOrganization:' $(pluginOrganization)
+      echo 'The value of pluginProject:' $(pluginProject)
+      echo 'The value of myValuepluginName:' $(myValuepluginName)
+      echo 'The value of pluginPath:' $(pluginPath)
