@@ -9,6 +9,12 @@ trigger:
 variables:
 - group: Shared Variables
 
+parameters:
+  - name: pluginOrganization
+    displayName: Description of pluginOrganization
+    default: someText
+    type: string
+
 pool:
   vmImage: ubuntu-latest
 
