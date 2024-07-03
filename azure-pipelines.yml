@@ -8,9 +8,13 @@ trigger:
 
 variables:
 - name: pluginOrganization
+  value: myValuepluginOrganization
 - name: pluginProject
+  value: myValuepluginProject
 - name: pluginName
+  value: myValuepluginName
 - name: pluginPath
+  value: myValuepluginPath
 
 pool:
   vmImage: ubuntu-latest
