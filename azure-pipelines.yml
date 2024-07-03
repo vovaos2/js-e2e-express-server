@@ -27,7 +27,7 @@ parameters:
 
   - name: pluginPath
     displayName: Description of pluginPath
-    default: pluginPath
+    default: someTextpluginPath
     type: string
 
 pool:
