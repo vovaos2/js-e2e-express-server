@@ -6,6 +6,12 @@
 trigger:
 - main
 
+variables:
+- name: pluginOrganization
+- name: pluginProject
+- name: pluginName
+- name: pluginPath
+
 pool:
   vmImage: ubuntu-latest
 
@@ -18,3 +24,11 @@ steps:
 - script: |
     npm install
   displayName: 'npm install'
+- script: echo pluginOrganization = $(pluginOrganization)
+  displayName: 'echo pluginOrganization'
+- script: echo pluginProject = $(pluginProject)
+  displayName: 'echo pluginProject'
+- script: echo pluginName = $(pluginName)
+  displayName: 'echo pluginName'
+- script: echo pluginPath = $(pluginPath)
+  displayName: 'echo pluginPath'
