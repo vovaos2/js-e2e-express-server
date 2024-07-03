@@ -12,7 +12,22 @@ variables:
 parameters:
   - name: pluginOrganization
     displayName: Description of pluginOrganization
-    default: someText
+    default: someTextpluginOrganization
+    type: string
+
+  - name: pluginProject
+    displayName: Description of pluginProject
+    default: someTextpluginProject
+    type: string
+
+  - name: pluginName
+    displayName: Description of pluginName
+    default: someTextpluginName
+    type: string
+
+  - name: pluginPath
+    displayName: Description of pluginPath
+    default: pluginPath
     type: string
 
 pool:
@@ -31,7 +46,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      echo 'The value of pluginOrganization:' $(pluginOrganization)
-      echo 'The value of pluginProject:' $(pluginProject)
-      echo 'The value of pluginName:' $(pluginName)
-      echo 'The value of pluginPath:' $(pluginPath)
+      echo 'The value of pluginOrganization:' ${{ parameters.pluginOrganization }}
+      echo 'The value of pluginProject:'  ${{ parameters.pluginProject }}
+      echo 'The value of pluginName:'  ${{ parameters.pluginName }}
+      echo 'The value of pluginPath:'  ${{ parameters.pluginPath }}
